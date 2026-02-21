@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جميع إذاعات القرآن الكريم | إذاعات القرآن</title>
+    <meta name="theme-color" content="#0d2137">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="إذاعات القرآن">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="radio.png">
+    <link rel="icon" type="image/x-icon" href="radio.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Reem+Kufi:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+       <!-- ============ SEO & Open Graph ============ -->
+<meta name="description" content="استمع لإذاعة القرآن الكريم من القاهرة مباشر أون لاين. بث مستمر ليلاً ونهاراً — Quran Radio Live Stream.">
+<meta name="keywords" content="إذاعة القرآن, راديو القرآن, القرآن الكريم, استماع اون لاين, quran radio, live quran">
+<meta name="author" content="سمير جاد">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://YOUR-DOMAIN.com/index.html">
+
+<!-- Open Graph (Facebook / WhatsApp) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://YOUR-DOMAIN.com/">
+<meta property="og:title" content="إذاعات القرآن الكريم — استماع مباشر">
+<meta property="og:description" content="استمع للقرآن الكريم من أشهر الإذاعات العربية والإسلامية مباشرة أون لاين.">
+<meta property="og:image" content="https://YOUR-DOMAIN.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:site_name" content="إذاعات القرآن الكريم">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="إذاعات القرآن الكريم — استماع مباشر">
+<meta name="twitter:description" content="استمع للقرآن الكريم من أشهر الإذاعات العربية والإسلامية مباشرة أون لاين.">
+<meta name="twitter:image" content="https://YOUR-DOMAIN.com/og-image.png">
+
+    <!-- حل مشكلة الرمشة (FOUC) قبل تحميل الصفحة -->
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') document.documentElement.classList.add('light-mode');
+        
+        const savedLang = localStorage.getItem('lang');
+        if (savedLang === 'en') {
+            document.documentElement.dir = 'ltr';
+            document.documentElement.lang = 'en';
+        }
+    </script>
+</head>
+
+<body>
+    <!-- ============================================
+         ULTRA PREMIUM NAVBAR (FLOATING PILL)
+    ============================================ -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-quran" style="font-size: 1.2rem;"></i>
+                <span>إذاعات القرآن</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="important-stations.html">أهم الإذاعات</a>
+                <a href="all-stations.html" class="active">جميع الاذاعات</a>
+                <a href="favorites.html">المفضلة <i class="fas fa-heart" style="color: #e74c3c; font-size: 0.8rem; margin-right: 5px;"></i></a>
+            </div>
+
+            <div class="nav-actions">
+                <button id="langToggle" class="nav-action-btn" title="تغيير اللغة">
+                    <i class="fas fa-globe"></i>
+                    <span id="langText">EN</span>
+                </button>
+                <button id="timerBtn" class="nav-action-btn" title="مؤقت النوم">
+                    <i class="fas fa-clock"></i>
+                    <span id="timerDisplay"></span>
+                </button>
+                <button id="themeToggle" class="nav-action-btn" title="تغيير الثيم">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         ALL STATIONS CONTENT
+    ============================================ -->
+    <main class="all-stations-section">
+        <div class="stations-content" style="padding-top: 40px;">
+            <h1>جميع إذاعات القرآن الكريم</h1>
+            
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="ابحث عن الإذاعة...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            
+            <!-- سيتم تحميل الإذاعات هنا عن طريق API من script.js -->
+            <div id="allStationsGrid" class="stations-grid"></div>
+        </div>
+    </main>
+
+    <!-- ============================================
+         SLEEP TIMER MODAL
+    ============================================ -->
+    <div class="timer-modal" id="timerModal">
+        <div class="timer-modal-content">
+            <button class="timer-close" onclick="closeTimerModal()"><i class="fas fa-times"></i></button>
+            <h3><i class="fas fa-clock"></i> مؤقت النوم</h3>
+            <div class="timer-options">
+                <button onclick="startSleepTimer(15)">15 دقيقة</button>
+                <button onclick="startSleepTimer(30)">30 دقيقة</button>
+                <button onclick="startSleepTimer(45)">45 دقيقة</button>
+                <button onclick="startSleepTimer(60)">60 دقيقة</button>
+            </div>
+            <button class="timer-cancel" onclick="clearSleepTimer(); closeTimerModal()">
+                <i class="fas fa-times-circle"></i> إلغاء المؤقت
+            </button>
+        </div>
+    </div>
+
+    <!-- ============================================
+         FOOTER
+    ============================================ -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">إذاعات القرآن الكريم</div>
+            <div class="footer-contact">
+                <a href="https://t.me/YOUR_TELEGRAM" target="_blank" class="telegram">
+                    <i class="fab fa-telegram"></i>
+                    تواصل عبر تيليجرام
+                </a>
+                <a href="mailto:YOUR_EMAIL@gmail.com" class="email">
+                    <i class="fas fa-envelope"></i>
+                    راسلني بالبريد
+                </a>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-copy">
+                جميع الحقوق محفوظة &copy; <span id="footerYear"></span> — 
+                <span>سمير جاد</span><br>
+                تم تطوير هذا الموقع بـ <i class="fas fa-heart" style="color:#e74c3c; font-size:0.8rem;"></i> لخدمة القرآن الكريم
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

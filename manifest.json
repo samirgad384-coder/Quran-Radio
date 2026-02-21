@@ -1,0 +1,25 @@
+{
+    "name": "إذاعات القرآن الكريم",
+    "short_name": "إذاعات القرآن",
+    "description": "استمع لإذاعات القرآن الكريم من مختلف دول العالم الإسلامي",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#0d2137",
+    "theme_color": "#0d2137",
+    "orientation": "portrait",
+    "lang": "ar",
+    "dir": "rtl",
+    "icons": [
+        {
+            "src": "radio.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "radio.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "categories": ["religion", "music"]
+}
