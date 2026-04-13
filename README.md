@@ -1,45 +1,40 @@
-<div align="center">
+# Quran Radio — إذاعات القرآن الكريم
 
-# 📻 إذاعات القرآن الكريم
-### Quran Radio Stations
+> A web platform for streaming live Quran radio stations from across the Islamic world.
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-
-> منصة ويب لبث إذاعات القرآن الكريم أونلاين مباشرةً من مختلف دول العالم الإسلامي
-
-</div>
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](.)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](.)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](.)
 
 ---
 
-## 📌 محتوى الموقع
+## Pages
 
-يحتوي الموقع على إذاعات القرآن الكريم، ويشمل:
-
-| الصفحة | الوصف |
-|--------|-------|
-| 🏠 الرئيسية | إذاعة القرآن الكريم من القاهرة مباشر |
-| ⭐ أهم الإذاعات | أبرز إذاعات القرآن حول العالم |
-| 📻 جميع الإذاعات | قائمة شاملة بكل الإذاعات عبر API |
+| Page | Description |
+|---|---|
+| Home | Live stream of Cairo Quran Radio |
+| Featured Stations | Highlighted stations from around the world |
+| All Stations | Full directory sourced from the MP3 Quran API |
 
 ---
 
-## 📡 الإذاعات المميزة
+## Featured Stations
 
-| الإذاعة | رابط البث |
-|---------|-----------|
-| إذاعة القاهرة | [🔗 Stream](https://stream.radiojar.com/8s5u5tpdtwzuv) |
-| السعودية - مكة المكرمة | [🔗 Stream](https://stream.radiojar.com/4wqre23fytzuv) |
-| الجزائر | [🔗 Stream](https://webradio.tda.dz/Coran_64K.mp3) |
-| الرقية الشرعية | [🔗 Stream](https://qurango.net/radio/roqiah) |
-| Quran Radio | [🔗 Stream](https://qurango.net/radio/tarateel) |
+| Station | Stream |
+|---|---|
+| Cairo — Egypt | [Listen](https://stream.radiojar.com/8s5u5tpdtwzuv) |
+| Mecca — Saudi Arabia | [Listen](https://stream.radiojar.com/4wqre23fytzuv) |
+| Algeria | [Listen](https://webradio.tda.dz/Coran_64K.mp3) |
+| Ruqyah | [Listen](https://qurango.net/radio/roqiah) |
+| Tarateel | [Listen](https://qurango.net/radio/tarateel) |
 
 ---
 
-## 🛠️ التقنيات المستخدمة
+## Tech Stack
 
-- **HTML5 / CSS3 / JavaScript** — بناء الواجهة الأمامية
-- **[MP3 Quran API](https://mp3quran.net/api/v3/radios)** — مصدر بيانات جميع الإذاعات
-- **[Tajawal Font](https://fonts.google.com/specimen/Tajawal)** — الخط العربي المستخدم
-- **[Font Awesome](https://fontawesome.com/)** — أيقونات الواجهة
+| Technology | Purpose |
+|---|---|
+| HTML5 / CSS3 / JavaScript | Frontend |
+| [MP3 Quran API](https://mp3quran.net/api/v3/radios) | Station data source |
+| [Tajawal](https://fonts.google.com/specimen/Tajawal) | Arabic typography |
+| [Font Awesome](https://fontawesome.com/) | UI icons |
